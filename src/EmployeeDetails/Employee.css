@@ -1,0 +1,31 @@
+
+ .title{
+    font-weight: 400;
+    text-align: center;
+    font-size: 2em;
+    color: #ff6666;
+    margin-bottom: 10px;
+  }
+
+  .Delete{
+    margin-left: auto;
+    margin-right: auto;
+    height: 5vh;
+  }
+
+  .textye{
+    margin-left: 200em;
+  }
+
+  .stick{
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
+  #back{
+    background-image: url("/public/back.jpg");
+  }
+
+  .tabrow{
+    font-family: 'Julius Sans One', sans-serif;
+  }

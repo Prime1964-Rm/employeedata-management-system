@@ -1,26 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route, Switch, BrowserRouter as Router, Redirect} from 'react-router-dom';
+import AddAdmin from './Addadmin';
+import EmployeeDetails from './EmployeeDetails/EmployeeDetails';
+import AddEmployee from './AddEmployees/AddEmployees';
+import Loginad from './Loginad';
+import LoginPage from './LoginPage';
+import LoginAdmin from './LoginComponent/LoginAdmin'
+import EmployeeData from './EmployeeDetails/EmployeeData';
+import EmployeeDetailsTable from './EmployeeDetails/EmployeeDetailsTable';
+import Auth from './Auth';
+import Homepage from './homepage';
+import NavBar from './MasterComponent/NavBar';
+import EditEMployee from './EmployeeDetails/EditEMployee';
+import Header from './Header/Header';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// const PrivateRoute = ({ component: Component, ...rest }) => {
+//     console.log("this is"+ Auth.isLoggedIn);
+//     return(
+    
+//     <Route {...rest} render={(props) => (
+//       Auth.isLoggedIn === true
+//         ? <Component {...props} />
+//         : <Redirect to='/' />
+//     )} />
+//   )}
+
+  
+
+function App(){
+
+        return(
+            <div>
+            <Router>
+                <Header/>
+                <Switch>
+                 <Route exact path="/Login" component={LoginAdmin}/>  
+                <Route exact path="/Homepage" component={Homepage}/> 
+                 <Route exact path="/EmployeeDetails" component={EmployeeDetails}/> 
+                <Route exact path="/EmployeeData" component={EmployeeData}/>
+                <Route exact path="/EmployeeDetailsTable" component={EmployeeDetailsTable}/>
+                <Route exact path="/AddAdmin" component={AddAdmin} />
+                <Route exact path="/AddEmployee" component={AddEmployee}/>
+                {/* <Route exact path="/" component={NavBar}/> */}
+                <Route exact path="/EditEmployee" component={EditEMployee}/>
+                </Switch>              
+                </Router>
+            </div>
+        )
 }
 
 export default App;

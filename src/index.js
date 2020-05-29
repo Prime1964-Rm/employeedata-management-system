@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import Loginad from './Loginad';
+// import LoginPage from './Login.component';
+// import { BrowserRouter } from 'react-router-dom';
+//  import App from './App';
+import homepage from './homepage';
+// import AddAdmin from './Addadmin';
+ import Homepage from './homepage';
+import AddEmployee from './AddEmployees/AddEmployees';
+import LoginPage from './LoginPage';
+import LoginAdmin from './LoginComponent/LoginAdmin';
+import EmployeeDetails from './EmployeeDetails/EmployeeDetails';
+import EmployeeDetailsTable from './EmployeeDetails/EmployeeDetailsTable';
+import EmployeeData from './EmployeeDetails/EmployeeData';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import NavBar from './MasterComponent/NavBar';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App/>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
