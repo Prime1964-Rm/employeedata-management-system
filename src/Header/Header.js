@@ -12,7 +12,8 @@ const Header = ()=>(
        <div className="options">
             <Link to="/AddEmployee" className="option">Add Employee</Link>
             <Link to="/EmployeeDetails" className="option">Employee Details</Link>
-            <Link to="/Contact" className="option">Contact</Link>    
+            <Link to="/Contact" className="option">Contact</Link> 
+            <Link to="/" className="option">Logout</Link>   
        </div>
     </div>
 

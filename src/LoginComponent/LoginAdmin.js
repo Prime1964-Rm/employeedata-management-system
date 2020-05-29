@@ -11,9 +11,9 @@ export class LoginAdmin extends Component {
 
     render() {
         return (
-            <ThemeProvider theme={theme}>  
+            <div className="details-container"> 
                 <LoginBody/>
-            </ThemeProvider>
+            </div>
         )
     }
 }

@@ -1,8 +1,10 @@
 import React,{Component} from 'react';
-import './Login.css'
+import './Login.scss'
 import Pic from '../icon/backgrou.jpg';
 import Auth from '../Auth'
 import { withRouter } from 'react-router';
+import { Paper, Container, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 
 class LoginBody extends Component{
@@ -56,30 +58,41 @@ handleSubmit=(event)=>{
     }).catch(error=>alert(error));
   }
 
-  Addadmin=(event)=>{
-    if(event){
-    this.props.history.push("/AddAdmin","Signup");
-  }
-}
+//   Addadmin=(event)=>{
+//     if(event){
+//     this.props.history.push("/AddAdmin","Signup");
+//   }
+// }
 
 
       render(){
         console.log(JSON.stringify(this.state.change));
         
         return(
-            <div>
-                    <div id="rightcontent">
-                        <div id="loginform">
-                            <input type="email" placeholder="EMAIL" id="email" name="email" onChange={this.onChange} className="details"/>
-                            <input type="password" placeholder="PASSOWRD" id="password" name="password" onChange={this.onChange} className="details"/>
-                            <input type="checkbox" id="remember" className="details"/>
-                            <font id="labfr">Remember Me</font>
+            
+              <React.Fragment >
+                <div className="heading">
+                    <Container maxWidth="sm" >
+                        <Paper className="form-container"  elevation={20} >
+                            <h1>Login</h1>
+                            <hr/>
+                            <form className="form-style">
+                            <input type="email" placeholder="EMAIL"  name="email" onChange={this.onChange} className="form-details"/>
+                            <input type="password" placeholder="PASSOWRD"  name="password" onChange={this.onChange} className="form-details"/>
+                            <span className="align-in-row">
+                            <input type="checkbox"  className="check"/>
+                            <font id="rem" >Remember Me</font>
                             <a href="#blank" id="fp">ForgotPassword?</a>
-                            <input type="submit" value="LOGIN" id="loginbutton" onClick={this.handleSubmit} className="details"/>
-                            <a href="#blank" id="signuplabel" onClick={this.Addadmin} >No account? Sign up</a>
-                        </div>
+                            </span>
+                            <Button onClick={this.handleSubmit} style={{ background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', fontFamily:"'Julius Sans One', sans-serif", marginTop: '3vh', width: "100%", color: '#ffffff', fontWeight: "600" }}>SUBMIT</Button>
+                            <Link to="/AddAdmin" style={{marginTop:"3vh"}}>No account? Sign up</Link>
+                            
+                            </form>
+                        </Paper>
+                      </Container>
                     </div>
-            </div>
+                </React.Fragment>
+            
         )
          
         }

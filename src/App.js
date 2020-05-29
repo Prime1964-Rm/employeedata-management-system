@@ -35,7 +35,7 @@ function App(){
             <Router>
                 <Header/>
                 <Switch>
-                 <Route exact path="/Login" component={LoginAdmin}/>  
+                 <Route exact path="/" component={LoginAdmin}/>  
                 <Route exact path="/Homepage" component={Homepage}/> 
                  <Route exact path="/EmployeeDetails" component={EmployeeDetails}/> 
                 <Route exact path="/EmployeeData" component={EmployeeData}/>

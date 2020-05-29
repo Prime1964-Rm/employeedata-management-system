@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../src/Addadmin.css';
+import '../src/Addadmin.scss';
 import Pic from './icon/backgrou.jpg';
 import logo from '../src/icon/logo.png';
 import { Redirect } from 'react-router';
@@ -47,25 +47,27 @@ class AddAdmin extends Component {
     render() {
         // console.log(JSON.stringify(this.state));
         return (
-            <React.Fragment>
-               <div className="header">
-                    <Container maxWidth="sm" >
-                    <Paper style={{  padding: "3vw",paddingTop:"2vw",marginLeft: "7.5vw", marginTop:"13vh", paddingBottom: "4vw",width:"45vh", height:"60%", position:"fixed" }}  elevation={20} >
-                    <h1 class="formhead" style={{color:"grey", fontWeight:"100", textAlign:"center"}}>Add Admin</h1 >
-                            <hr/>
-                            <form>
-                                <input type="text" placeholder="First Name" name="firstname" onChange={this.onChange} id="first" className="details" />
-                                <input type="text" placeholder="Last Name" name="lastname" id="last" onChange={this.onChange} className="details" />
-                                <input type="email" placeholder="E-mail" name="email" id="username" onChange={this.onChange} className="details" />
-                                <input type="password" placeholder="Password" name="password" onChange={this.onChange}  className="details" />
-                                <input type="text" className="details" placeholder="Phone no" name="phoneno" onChange={this.onChange} id="phoneno" />
+            <div className="details-container">
+            <div className="heading">
+                <Container maxWidth="sm" >
+                    <Paper className="form-container"  elevation={20} >
+                        <h1>Add Admin</h1>
+                        <hr/>
+                        <form className="form-style">
+                            <span className="name">
+                                <input type="text" placeholder="First Name" name="firstname" onChange={this.onChange}  className="span-details" />
+                                <input type="text" placeholder="Last Name" name="lastname"onChange={this.onChange} className="span-details" />
+                            </span>
+                                <input type="email" placeholder="E-mail" name="email" onChange={this.onChange} className="form-details" />
+                                <input type="password" placeholder="Password" name="password" onChange={this.onChange}  className="form-details" />
+                                <input type="text" className="form-details" placeholder="Phone no" name="phoneno" onChange={this.onChange}  />
                                 <Button className="add" style={{ background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)', marginTop: '4vh',fontFamily:"'Julius Sans One', sans-serif", width: "100%", color: '#ffffff', fontWeight: "600" }} onClick={this.onAdd}>Add</Button>
 
                             </form>
                         </Paper>
                     </Container>
                 </div>
-            </React.Fragment>
+                </div>
         )
     }
 
