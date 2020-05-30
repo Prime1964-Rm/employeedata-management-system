@@ -1,0 +1,24 @@
+.data-container{
+    display: flex;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+   
+    .twenty-percent{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+
+    .eighty-percent{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+        .eighty-percent-child{
+            width: 80%;
+        }
+    }
+}

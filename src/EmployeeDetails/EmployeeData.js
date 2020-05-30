@@ -15,8 +15,9 @@ import { useHistory } from "react-router-dom";
 import { useState } from 'react';
 import EditIcon from '@material-ui/icons/Edit';
 import wall from '../back.jpg'
-import './Employee.css'
+import './Employee.scss'
 import Modal from 'react-modal';
+import './EmployeeData.scss'
 
 const innerStyles = makeStyles((theme) => ({
 
@@ -36,13 +37,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(0),
     alignSelf: 'justify',
     background: 'skyblue',
-    padding: '1vw'
+    padding: '1vw',
+    borderRadius: "0"
   },
   femaleinner: {
     marginTop: theme.spacing(0),
     alignSelf: 'justify',
     background: 'pink',
-    padding: '1vw'
+    padding: '1vw',
+    borderRadius: "0"
   },
   maleprofile: {
     display: 'inline-block',
@@ -54,8 +57,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    height: theme.spacing(60),
-    width: theme.spacing(20)
+    height: "100%",
+    width: theme.spacing(38),
+    borderRadius: "8",
   },
   femaleprofile: {
     display: 'inline-block',
@@ -67,8 +71,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    height: theme.spacing(60),
-    width: theme.spacing(20)
+    height: "100%",
+    width: theme.spacing(38),
+    borderRadius: "8"
+
   },
   about: {
     marginTop: theme.spacing(4),
@@ -89,10 +95,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   paper: {
+    
     padding: theme.spacing(2),
     textAlign: 'left',
     color: "#000000",
-
+    width: theme.spacing(50),
+    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+    marginTop:"-10vh"
   },
 
   femaleheading: {
@@ -135,6 +144,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
+
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -166,15 +176,16 @@ function TabPanel(props) {
 
 function EmployeeData(props) {
   const [modalstatus, setStatus] = useState(false)
-  console.log(formvalues)
   const [edit, setEdit] = useState(false);
   console.log(edit);
-  var [formvalues, setFormValues] = useState(props.history.location.state);
+  let [formvalues, setFormValues] = useState(props.history.location.state);
+
   setFormValues =(input)=>(event) =>{
     formvalues[input]= event.target.value;
     console.log(formvalues);
   }
   console.log(formvalues)
+
 
   function submit(e){
     let url= "http://127.0.0.1:5000/lms/editEmployeeDetails"
@@ -187,6 +198,7 @@ function EmployeeData(props) {
       },
       body : JSON.stringify({qci_id:formvalues.qci_id,board:formvalues.board,gender:formvalues.gender,email:formvalues.email,name:formvalues.name,password:formvalues.password,designation:formvalues.designation, type_of_employee:formvalues.type_of_employee,bal_cl:formvalues.bal_cl,bal_pl:formvalues.bal_pl,bal_ptl:formvalues.bal_ptl,bal_eol:formvalues.bal_eol,bal_sl:formvalues.bal_sl,bal_ml:formvalues.bal_ml})
     }
+    setStatus(false)
     fetch(url,obj).then(res=>res.json()).then(res=>{
       if(res.success){
         alert(res.message);
@@ -197,6 +209,7 @@ function EmployeeData(props) {
     })
   }
 
+  
 
   const { bal_cl, bal_eol, bal_ml, bal_pl, bal_ptl, bal_sl, board, designation, email, gender, name, qci_id, type_of_employee
   } = props.history.location.state
@@ -225,14 +238,24 @@ function EmployeeData(props) {
   console.log(props.history.location.state)
   return (
     <div classNames={((gender === "Male") ? classes.maleroot : classes.femaleroot)} >
-      <Modal width="50vh" isOpen={true}>
-        <h2>Enter password</h2>
-        <TextField id="outlined-basic" name="type_of_employee" onChange={setFormValues("password")} variant="outlined" />
+
+       <Modal className="modalstyle" width="50vh"  isOpen={modalstatus}>
+         <span className="modalhead">
+         <h1>Enter password</h1>
+          <button style={{width:"1vh"}} className="x" onClick={()=> setStatus(false)}>x</button>
+          </span>
+          <span className="centerel">
+        <input type="password" className="passinput" id="outlined-basic" name="type_of_employee" onChange={setFormValues("password")} variant="outlined" />
+        </span>
+        <span className="centerel">
+        <Button variant="contained" className="confirm" style={{color:"white", backgroundColor:"#f50057"}} onClick={submit}>Confirm</Button>
+        </span>
       </Modal>
-      <Grid container spacing={12} >
-        <img src={wall} style={{position:"fixed", zIndex:"-1"}}/>
-        <Grid item xs={6} sm={3} id="back">
-          <Paper className={(gender === "Male") ? classes.maleprofile : classes.femaleprofile} id="back">
+          
+      
+      <div className="data-container" >
+        <div className="twenty-percent">
+          <Paper  className={(gender === "Male") ? classes.maleprofile : classes.femaleprofile} id="back" >
             <Paper className={(gender === "Male") ? classes.maleinner : classes.femaleinner}>
               {
                 profile(edit)
@@ -247,6 +270,7 @@ function EmployeeData(props) {
               </Typography>
             </Paper>
             <Button
+            style={{marginTop:"3vh",marginRight:"1vh"}}
             variant="contained"
             color="secondary"
             background="white"
@@ -254,21 +278,27 @@ function EmployeeData(props) {
             className={classes.button}
             startIcon={<EditIcon/>}
           >Edit</Button>
-          <Button variant="contained" style={{color:"white", background:"yellow"}} onClick={submit}>Submit</Button>
+          <Button 
+          variant="contained"
+           style={{marginTop:"3vh",marginRight:"1vh",background:"orange", color:"white"}}
+          onClick={()=>setStatus(true)}>
+            
+            Submit
+          </Button>
           </Paper>
           
-        </Grid>
+        </div>
 
-        <Grid item xs={12} sm={6}>
-          <Tabs value={value} className={(gender === "Male") ? classes.maletabs : classes.femaletabs} onChange={handleChange} aria-label="simple tabs example" style={{position:"fixed",marginLeft:"4.5vw"}}>
+        <div className="eighty-percent">
+          <Tabs value={value} className={(gender === "Male") ? classes.maletabs : classes.femaletabs} onChange={handleChange} aria-label="simple tabs example" style={{width:"65%"}}>
             <Tab label="About" {...a11yProps(0)} />
             <Tab label="Leave Balance" {...a11yProps(1)} />
             <Tab label="Contact" {...a11yProps(2)}  />
           </Tabs>
           <TabPanel style={{marginTop:"10vh"}} value={value} index={0}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper} >
               
-            <Paper className={(gender === "Male") ? classes.maleheading : classes.femaleheading}>
+            <Paper  className={(gender === "Male") ? classes.maleheading : classes.femaleheading}>
                 <Typography variant="h9" >Name
                 </Typography>
               </Paper>
@@ -341,8 +371,8 @@ function EmployeeData(props) {
               {(edit === false) ? null : <TextField id="outlined-basic" onChange={setFormValues("email")} variant="outlined" />}
             </Paper>
           </TabPanel>
-        </Grid>     
-      </Grid>
+        </div>     
+      </div>
     </div>
   );
 }

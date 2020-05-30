@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import './Employee.css'
 import EmployeeDetailsTable from './EmployeeDetailsTable'
 import Typography from '@material-ui/core/Typography';
 import theme from './UI/Theme'
 import { ThemeProvider } from '@material-ui/core';
-import './Employee.css'
+import './Employee.scss'
 import CustomPaginationActionsTable from '../LoginComponent/EditTable';
 import { makeStyles } from '@material-ui/core/styles';
 import Head from './UI/Head';

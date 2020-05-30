@@ -8,11 +8,11 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
-import './Employee.css'
+import './Employee.scss'
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
 import theme from './UI/Theme'
-import { ThemeProvider } from '@material-ui/core';
+import { ThemeProvider, Modal } from '@material-ui/core';
 import TableFooter from '@material-ui/core/TableFooter';
 import TablePagination from '@material-ui/core/TablePagination';
 import IconButton from '@material-ui/core/IconButton';
@@ -27,6 +27,7 @@ import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { withRouter } from 'react-router';
 import { useHistory } from "react-router-dom";
+import EmployeeData from './EmployeeData';
 
 
 const useStyles1 = makeStyles((theme) => ({
