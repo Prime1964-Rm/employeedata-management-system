@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/employee-management-system/static/css/main.c900edfb.chunk.css",
-    "main.js": "/employee-management-system/static/js/main.b4cefc67.chunk.js",
-    "main.js.map": "/employee-management-system/static/js/main.b4cefc67.chunk.js.map",
-    "runtime-main.js": "/employee-management-system/static/js/runtime-main.74b5dc3f.js",
-    "runtime-main.js.map": "/employee-management-system/static/js/runtime-main.74b5dc3f.js.map",
-    "static/js/2.56052479.chunk.js": "/employee-management-system/static/js/2.56052479.chunk.js",
-    "static/js/2.56052479.chunk.js.map": "/employee-management-system/static/js/2.56052479.chunk.js.map",
-    "index.html": "/employee-management-system/index.html",
-    "precache-manifest.395da3f91a7c739077cf32adf64a19f0.js": "/employee-management-system/precache-manifest.395da3f91a7c739077cf32adf64a19f0.js",
-    "service-worker.js": "/employee-management-system/service-worker.js",
-    "static/css/main.c900edfb.chunk.css.map": "/employee-management-system/static/css/main.c900edfb.chunk.css.map",
-    "static/js/2.56052479.chunk.js.LICENSE.txt": "/employee-management-system/static/js/2.56052479.chunk.js.LICENSE.txt",
-    "static/media/back.jpg": "/employee-management-system/static/media/back.fedc30ec.jpg",
-    "static/media/backgrou.jpg": "/employee-management-system/static/media/backgrou.6c84e72c.jpg",
-    "static/media/female.png": "/employee-management-system/static/media/female.500b122c.png",
-    "static/media/logo.png": "/employee-management-system/static/media/logo.d05dd29c.png",
-    "static/media/App.css": "/employee-management-system/static/media/silveriphonenearmac.f2e3ad87.jpg"
+    "main.css": "/employeedata-management-system/static/css/main.283448fe.chunk.css",
+    "main.js": "/employeedata-management-system/static/js/main.b4cefc67.chunk.js",
+    "main.js.map": "/employeedata-management-system/static/js/main.b4cefc67.chunk.js.map",
+    "runtime-main.js": "/employeedata-management-system/static/js/runtime-main.5cf414bc.js",
+    "runtime-main.js.map": "/employeedata-management-system/static/js/runtime-main.5cf414bc.js.map",
+    "static/js/2.56052479.chunk.js": "/employeedata-management-system/static/js/2.56052479.chunk.js",
+    "static/js/2.56052479.chunk.js.map": "/employeedata-management-system/static/js/2.56052479.chunk.js.map",
+    "index.html": "/employeedata-management-system/index.html",
+    "precache-manifest.710c365c830c654285a54f5b2fe67d65.js": "/employeedata-management-system/precache-manifest.710c365c830c654285a54f5b2fe67d65.js",
+    "service-worker.js": "/employeedata-management-system/service-worker.js",
+    "static/css/main.283448fe.chunk.css.map": "/employeedata-management-system/static/css/main.283448fe.chunk.css.map",
+    "static/js/2.56052479.chunk.js.LICENSE.txt": "/employeedata-management-system/static/js/2.56052479.chunk.js.LICENSE.txt",
+    "static/media/back.jpg": "/employeedata-management-system/static/media/back.fedc30ec.jpg",
+    "static/media/backgrou.jpg": "/employeedata-management-system/static/media/backgrou.6c84e72c.jpg",
+    "static/media/female.png": "/employeedata-management-system/static/media/female.500b122c.png",
+    "static/media/logo.png": "/employeedata-management-system/static/media/logo.d05dd29c.png",
+    "static/media/App.css": "/employeedata-management-system/static/media/silveriphonenearmac.f2e3ad87.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.74b5dc3f.js",
+    "static/js/runtime-main.5cf414bc.js",
     "static/js/2.56052479.chunk.js",
-    "static/css/main.c900edfb.chunk.css",
+    "static/css/main.283448fe.chunk.css",
     "static/js/main.b4cefc67.chunk.js"
   ]
 }
