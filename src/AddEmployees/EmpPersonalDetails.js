@@ -22,13 +22,10 @@ state={
         const { values } = this.props;
         const { onChange } = this.props;
         return (
-            <React.Fragment >
-                <div className="heading">
-                    <Container maxWidth="sm" >
-                        <Paper className="form-container"  elevation={20} >
+                        <Paper className="form-contain"   elevation={20} >
                             <h1>Personal</h1>
                             <hr/>
-                            <form className="form-style">
+                            <form className="form-styler">
                                 <span className="name">
                                 <input type="text" placeholder="First Name"  defaultValue={values.firstname} onChange={onChange("firstname")}  className="span-details" />
                                 <input placeholder="Last Name"  defaultValue={values.lastname} onChange={onChange("lastname")}  className="span-details" />
@@ -44,9 +41,7 @@ state={
                                 <Button onClick={this.continue} style={{ background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', fontFamily:"'Julius Sans One', sans-serif", width: "100%",marginTop:"3vh", color: '#ffffff', fontWeight: "600" }}>Next</Button>
                             </form>
                         </Paper>
-                    </Container>
-                    </div>
-                </React.Fragment>
+                   
         )
     }
 }

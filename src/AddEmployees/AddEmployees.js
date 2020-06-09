@@ -103,19 +103,19 @@ class AddEmployee extends Component{
         switch(step){
             case 1: 
             return (
-                <div className="details-container">
+                <div className="details-contain" >
                   <EmpPersonalDetails values={values} nextStep={this.nextStep} onChange={this.onChange}/>
                   </div>
             )
             case 2:
                 return(
-                    <div className="details-container">
+                    <div className="details-contain" >
                   <EmpBackgroundDetails values={values} nextStep={this.nextStep} prevStep={this.prevStep} onChange={this.onChange}/>
                   </div>
                 )  
            case 3:
                return(
-                <div className="details-container">
+                <div className="details-contain">
                     <LeaveDetails values={values} onAddEmp={this.onAddEmp}  prevStep={this.prevStep} onChange={this.onChange}/>
                 </div>
                )

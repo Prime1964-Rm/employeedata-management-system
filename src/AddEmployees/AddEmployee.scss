@@ -1,89 +1,85 @@
-
-.details-container{
+.details-contain{
     display: flex;
     flex-direction: column;
-    height: 450px;
+    height: 550px;
     width: 100%;
     justify-content: center;
     align-items: center;
 
-    .form-container{
-        padding-top: 2vh;
-        padding-bottom: 4vh;
-        width: 280px;
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-        padding-left: 3vw;
-        padding-right: 3vw;
-        
-       
-        .form-style{
+
+        .form-contain{
+            padding-top: 2vh;
+            padding-bottom: 4vh;
+            width: 280px;
+            height: 85%;
             display: flex;
-            height: 300px;
             flex-direction: column;
-            overflow: hidden;    
-       
-
-            .name{
+            padding-left: 3vw;
+            padding-right: 3vw;
+            
+        
+            .form-styler{
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                .span-details{
-                    width: 41%;
-                    border-radius: 2px;
-                 height:14px;
-                 margin-top: 3vh;
-                 font-weight: 600;
-                 font-family: 'Julius Sans One', sans-serif;
-                 font-size: 15px;
-                 border: 0.8px solid lightgray;
-                 padding: 1.5vh;
-                 background:  rgb(248, 242, 242);
-                }
-
-            }
-
-            .gender{
-                margin-top: 3vh;
-                display: flex;
-                flex-direction: row;
-                font-weight: 600;
-                color: grey;
-
-                #f{
-                    margin-left: 2vh;
-                }
-
-                #ml{
-                    margin-left: 1vh;
-                }
-
-                #fl{
-                    margin-left: 1vh;
-                }
-            }
-
-            .form-details{
-                display: flex;
-                margin-top: 3vh;
+                height: 90%;
                 flex-direction: column;
-                width: 93%;
-                font-family: 'Julius Sans One', sans-serif;
-                color: black;
-                font-weight: 600;
-                font-size: 15px;
-                border: 0.8px solid lightgray;
-                padding: 1.5vh;
-                background:  rgb(248, 242, 242);
-                border-radius: 2px;
-                height:5%;
-            }
-        }
-        
+                overflow: hidden;    
 
-        
+                .name{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .span-details{
+                        width: 41%;
+                        border-radius: 2px;
+                    height:14px;
+                    margin-top: 3vh;
+                    font-weight: 600;
+                    font-family: 'Julius Sans One', sans-serif;
+                    font-size: 15px;
+                    border: 0.8px solid lightgray;
+                    padding: 1.5vh;
+                    background:  rgb(248, 242, 242);
+                    }
+
+                }
+
+                .gender{
+                    margin-top: 3vh;
+                    display: flex;
+                    flex-direction: row;
+                    font-weight: 600;
+                    color: grey;
+
+                    #f{
+                        margin-left: 2vh;
+                    }
+
+                    #ml{
+                        margin-left: 1vh;
+                    }
+
+                    #fl{
+                        margin-left: 1vh;
+                    }
+                }
+
+                .form-details{
+                    display: flex;
+                    margin-top: 3vh;
+                    flex-direction: column;
+                    width: 93%;
+                    font-family: 'Julius Sans One', sans-serif;
+                    color: black;
+                    font-weight: 600;
+                    font-size: 15px;
+                    border: 0.8px solid lightgray;
+                    padding: 1.5vh;
+                    background:  rgb(248, 242, 242);
+                    border-radius: 2px;
+                    height:5%;
+                }
+            }
     }
 }
 
@@ -105,4 +101,3 @@ h1{
     color: gray;
     margin-bottom: .2em;
     }
-    

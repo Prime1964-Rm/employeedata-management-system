@@ -23,13 +23,10 @@ export class LeaveDetails extends Component {
 
         if (values.gender == "Male") {
             return (
-                <React.Fragment>
-                    <div className="heading">
-                        <Container maxWidth="sm" >
-                        <Paper className="form-container"  elevation={20} >
+                        <Paper className="form-contain"  elevation={20} >
                          <h1>Leave Detail</h1 >
                             <hr/>    
-                               <form className="form-style">
+                               <form className="form-styler">
                                     <span className="name">
                                         <input type="text" placeholder="balance casual leaves" defaultValue={values.bal_cl}  onChange={onChange("bal_cl")} className="span-details" />
                                         <input type="text" placeholder="balance sick leaves" defaultValue={values.bal_sl} name="bal_sl" className="span-details" onChange={onChange("bal_sl")} />
@@ -44,20 +41,15 @@ export class LeaveDetails extends Component {
                                     <Button onClick={this.props.onAddEmp} style={{ background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', fontFamily:"'Julius Sans One', sans-serif", marginTop: '1vh', width: "100%", color: '#ffffff', fontWeight: "600" }}>SUBMIT</Button>
                                 </form>
                             </Paper>
-                        </Container>
-                    </div>
-                </React.Fragment>
             )
         }
         else {
             return (
-                <React.Fragment>
-                   <div className="heading">
-                        <Container maxWidth="sm" >
-                        <Paper className="form-container"  elevation={20} >
+                
+                        <Paper className="form-contain"   elevation={20} >
                          <h1>Leave Detail</h1 >
                             <hr/>    
-                               <form className="form-style">
+                               <form className="form-styler">
                                <span className="name">
                                     <input type="text" placeholder="balance casual leaves" defaultValue={values.bal_cl} id="leaveleft" onChange={onChange("bal_cl")} className="span-details" />
                                     <input type="text" placeholder="balance sick leaves" defaultValue={values.bal_sl} name="bal_sl" className="span-details" id="balsl" onChange={onChange("bal_sl")} />
@@ -72,9 +64,7 @@ export class LeaveDetails extends Component {
                                     <Button onClick={this.props.onAddEmp} style={{ background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', fontFamily:"'Julius Sans One', sans-serif", marginTop: '1vh', width: "100%", color: '#ffffff', fontWeight: "600" }}>SUBMIT</Button>
                                 </form>
                             </Paper>
-                        </Container>
-                    </div>
-                </React.Fragment>
+                
             )
         }
     }

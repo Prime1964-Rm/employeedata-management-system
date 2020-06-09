@@ -70,9 +70,6 @@ handleSubmit=(event)=>{
         
         return(
             
-              <React.Fragment >
-                <div className="heading">
-                    <Container maxWidth="sm" >
                         <Paper className="form-container"  elevation={20} >
                             <h1>Login</h1>
                             <hr/>
@@ -89,9 +86,7 @@ handleSubmit=(event)=>{
                             
                             </form>
                         </Paper>
-                      </Container>
-                    </div>
-                </React.Fragment>
+            
             
         )
          

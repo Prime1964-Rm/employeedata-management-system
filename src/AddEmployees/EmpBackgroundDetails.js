@@ -19,13 +19,10 @@ export class EmpBackgroundDetails extends Component {
         const { values } = this.props;
         const { onChange } = this.props;
         return (
-            <React.Fragment>
-                <div className="heading">
-                    <Container maxWidth="sm" >
-                    <Paper className="form-container"  elevation={20} >
+                    <Paper className="form-contain" elevation={20} >
                     <h1 >About</h1 >
                             <hr/>
-                            <form className="form-style">
+                            <form className="form-styler">
                                 <input  type="text" defaultValue={values.designation} placeholder="Designation" onChange={onChange("designation")}  className="form-details" />
                                 <input type="text" defaultValue={values.type_of_employee} placeholder="type_of_employee" name="type_of_employee"  onChange={onChange("type_of_employee")} className="form-details" />
                                 <input type="text" defaultValue={values.board} placeholder="Board" className="form-details"  onChange={onChange("board")} />
@@ -36,10 +33,6 @@ export class EmpBackgroundDetails extends Component {
 
                             </form>
                         </Paper>
-                    </Container>
-                </div>
-            </React.Fragment>
-
         )
     }
 }
