@@ -2,6 +2,7 @@
   "name": "react-fetch-rest-api",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Prime1964-Rm.github.io/employee-management-system/",
   "dependencies": {
     "@material-ui/core": "^4.9.14",
     "@material-ui/icons": "^4.9.1",
@@ -28,6 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
